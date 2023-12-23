@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { getAllPost } from '../../services/post-service'
-import { PostInterface } from '../../interfaces/Post.interace'
+import { PaginationPostInterface, PostInterface } from '../../interfaces/Post.interace'
 
 export const PostSection = () => {
   const [isLoading, setIsLoading] = useState(true)
-  const [posts, setPosts] = useState()
+  const [posts, setPosts] = useState<PaginationPostInterface>()
 
   useEffect(() => {
     
